@@ -1,0 +1,16 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    background: black;
+}
+
+.svg-map {
+    margin: auto;
+    min-width: 1017px;
+    width: 50%;
+}
+
+svg {
+    min-width: 1017px;
+    width: 100%;
+}
