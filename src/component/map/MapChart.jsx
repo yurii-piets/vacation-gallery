@@ -22,17 +22,18 @@ export default class MapChart extends Component {
 
     prepareIcon = (category) => {
         const size = 25;
+        console.log(category.name, category_colors[(category.name)]);
         return {
             "top": `${(category.position.top)}`,
             "left": `${(category.position.left)}`,
             "background-size": "cover",
             "background-image": "url(" + `${(category.photos[0].src)}` + ")",
             "border-radius": size + "px",
-            "border": "1px groove",
+            "border": "1px solid",
             "border-color": `${category_colors[(category.name)]}`,
             "width": size + "px",
             "height": size + "px",
-            "position": "relative",
+            "position": "absolute",
         };
     };
 
