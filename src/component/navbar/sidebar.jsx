@@ -5,7 +5,7 @@ import {GiCycling, GiElephant, GiCalendar} from 'react-icons/gi';
 
 const Fragment = styled.div`
     z-index: 10;
-    margin-top: 5%
+    top: 5%
     position: absolute;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
     height: 300px; //todo remove me pls
@@ -36,8 +36,8 @@ export default class Sidebar extends Component {
         return (
             <Fragment>
                 <ul>
-                    <li><AiOutlineHome className="icon-item"/></li>
                     <li><GiCycling className="icon-item"/></li>
+                    <li><AiOutlineHome className="icon-item"/></li>
                     <li><GiElephant className="icon-item"/></li>
                     <li><AiTwotoneShopping className="icon-item"/></li>
                     <li><GiCalendar className="icon-item"/></li>
