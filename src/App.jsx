@@ -1,7 +1,7 @@
 import React from 'react';
 import "./styles.css";
 import ZoomableMap from "./component/map/ZoomableMap";
-import Sidebar from "./component/navbar/sidebar";
+import Sidebar from "./component/navbar/Sidebar";
 import colors from './constant/style';
 import {ThemeProvider} from "styled-components";
 import index from "styled-components/dist/styled-components-macro.esm";
