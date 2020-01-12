@@ -14,7 +14,7 @@ export default class ZoomableMap extends Component {
             <Fragment>
                 <TransformWrapper defaultScale={2} wheel={{step: 100}}>
                     <TransformComponent>
-                        <MapChart/>
+                        <MapChart categories={this.props.categories}/>
                     </TransformComponent>
                 </TransformWrapper>
             </Fragment>

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import styled from 'styled-components';
 import {AiOutlineHome, AiTwotoneShopping, AiOutlineFileUnknown} from 'react-icons/ai';
 import {GiCycling, GiElephant} from 'react-icons/gi';
-import category_colors from "../../constant/category_style";
+import categories from "../../constant/categories";
 
 const Fragment = styled.a`
     .icon {
@@ -22,15 +22,16 @@ const Fragment = styled.a`
 
 export default class Icon extends Component {
     state = {
-        enabled: true
+        enabled: true,
     };
 
-    handleOnClick = () => {
+    handleOnClick = (categoryName) => {
+        this.props.onClick(categoryName);
         this.setState({enabled: !this.state.enabled})
     };
 
     selectEnabledStyle = (categoryName) => {
-        return {"color": category_colors[categoryName]}
+        return {"color": categories[categoryName]}
     };
 
     selectIcon = (categoryName) => {
@@ -47,9 +48,10 @@ export default class Icon extends Component {
     };
 
     render() {
+        const {categoryName} = this.props;
         return (
-            <Fragment onClick={this.handleOnClick}>
-                {this.selectIcon(this.props.categoryName)}
+            <Fragment onClick={() => this.handleOnClick(categoryName)}>
+                {this.selectIcon(categoryName)}
             </Fragment>
         )
     }

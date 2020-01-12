@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import styled from 'styled-components';
+import collections from "../../constant/collections";
 import categories from "../../constant/categories";
-import category_colors from "../../constant/category_style";
+import MapIcon from "./MapImage";
 
 const Fragment = styled.a`
     margin: auto;
@@ -20,30 +21,15 @@ const Fragment = styled.a`
 
 export default class MapChart extends Component {
 
-    prepareIcon = (category) => {
-        const size = 25;
-        return {
-            "top": `${(category.position.top)}`,
-            "left": `${(category.position.left)}`,
-            "background-size": "cover",
-            "background-image": "url(" + `${(category.photos[0].src)}` + ")",
-            "border-radius": size + "px",
-            "border": "1px solid",
-            "border-color": `${category_colors[(category.name)]}`,
-            "width": size + "px",
-            "height": size + "px",
-            "position": "absolute",
-        };
-    };
-
     render() {
         return (
             <Fragment>
-                {categories
-                    .filter(category => category.photos.length > 0)
-                    .map(category => (
-                        <div style={this.prepareIcon(category)}/>
-                ))}
+                {
+                    collections
+                    .filter(collection => collection.photos.length > 0)
+                    .filter(collection => this.props.categories.includes(collection.name))
+                    .map(category => (<MapIcon category={category}/>))
+                }
 
                 <svg version="1.2" xmlns="http://www.w3.org/2000/svg"
                      fill="#fff"

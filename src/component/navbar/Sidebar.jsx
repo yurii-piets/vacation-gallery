@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import category_colors from "../../constant/category_style";
-import Icon from "./Icon";
+import categories from "../../constant/categories";
+import Icon from "./MenuIcon";
 
 const Fragment = styled.div`
     z-index: 10;
@@ -20,12 +20,11 @@ const Fragment = styled.div`
 export default class Sidebar extends Component {
 
     render() {
-        console.log(Object.keys(category_colors));
         return (
             <Fragment>
                 <ul>
-                    {Object.keys(category_colors).map(categoryName => (
-                            <li><Icon categoryName={categoryName}/></li>
+                    {Object.keys(categories).map(categoryName => (
+                            <li><Icon categoryName={categoryName} onClick={this.props.onClick}/></li>
                         )
                     )}
                 </ul>
