@@ -9,7 +9,7 @@ export default function App() {
     return (
         <React.Fragment>
             <ThemeProvider theme={colors}>
-                <Sidebar/>
+                {/*<Sidebar/>*/}
                 <ZoomableMap/>
             </ThemeProvider>
         </React.Fragment>

@@ -6,7 +6,7 @@ export default class ZoomableMap extends Component {
 
     render() {
         return (
-            <TransformWrapper defaultScale={1} wheel={{step: 100}}>
+            <TransformWrapper defaultScale={2} wheel={{step: 100}}>
                 <TransformComponent>
                     <MapChart/>
                 </TransformComponent>
