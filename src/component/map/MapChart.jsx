@@ -21,13 +21,14 @@ const Fragment = styled.a`
 export default class MapChart extends Component {
 
     prepareIcon = (category) => {
-        const size = 30;
+        const size = 25;
         return {
             "top": `${(category.position.top)}`,
             "left": `${(category.position.left)}`,
+            "background-size": "cover",
             "background-image": "url(" + `${(category.photos[0].src)}` + ")",
-            "border-radius": (size / 2) + "px",
-            "border": "2px solid ",
+            "border-radius": size + "px",
+            "border": "1px groove",
             "border-color": `${category_colors[(category.name)]}`,
             "width": size + "px",
             "height": size + "px",
