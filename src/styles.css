@@ -1,16 +1,6 @@
-html, body {
-    width: 100%;
+html, body, svg, div {
     margin: 0;
-    background: black;
+    padding: 0;
+    border: 0;
+    background: #262626;
 }
-
-.svg-map {
-    margin: auto;
-    min-width: 1017px;
-    width: 50%;
-}
-
-/*svg {*/
-/*    min-width: 1017px;*/
-/*    width: 100%;*/
-/*}*/

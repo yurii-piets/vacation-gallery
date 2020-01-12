@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import styled from 'styled-components';
 
-const Fragment = styled.a`
+const Fragment = styled.p`
     path {
         transition: .7s ease-in-out;
     }
@@ -9,6 +9,12 @@ const Fragment = styled.a`
     path:hover {
         fill: ${({theme}) => (theme.primary)};
         transition: .7s ease-in-out;
+    }
+    
+    svg {
+        min-width: 1000px;
+        width: 50%;
+        display: flex;
     }
 `;
 
