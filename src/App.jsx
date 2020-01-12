@@ -14,7 +14,6 @@ export default class App extends Component {
 
     handleMenuIconClick = (categoryName) => {
         const {enabledCategories} = this.state;
-        console.log(enabledCategories.filter(ecn => ecn === categoryName));
         this.setState({
             enabledCategories: enabledCategories.includes(categoryName) ? enabledCategories.filter(ecn => ecn !== categoryName) : enabledCategories.concat([categoryName])
         });

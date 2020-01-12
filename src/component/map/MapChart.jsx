@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import styled from 'styled-components';
 import collections from "../../constant/collections";
-import categories from "../../constant/categories";
+import "./mapIconsAnimation.css"
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import MapIcon from "./MapImage";
 
 const Fragment = styled.a`
@@ -24,12 +25,20 @@ export default class MapChart extends Component {
     render() {
         return (
             <Fragment>
+                <ReactCSSTransitionGroup
+                    transitionName="example"
+                    transitionAppearTimeout={0} transitionEnterTimeout={0} transitionLeaveTimeout={0}
+                    transitionAppear={true} transitionEnter={true} transitionLeave={true}>
                 {
                     collections
-                    .filter(collection => collection.photos.length > 0)
-                    .filter(collection => this.props.categories.includes(collection.name))
-                    .map(category => (<MapIcon category={category}/>))
+                        .filter(collection => collection.photos.length > 0)
+                        .filter(collection => this.props.categories.includes(collection.name))
+                        .map(collection => (
+                                // key property is required for proper animation
+                                <MapIcon key={collections.indexOf(collection)} category={collection}/>
+                        ))
                 }
+                </ReactCSSTransitionGroup>
 
                 <svg version="1.2" xmlns="http://www.w3.org/2000/svg"
                      fill="#fff"

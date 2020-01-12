@@ -80,6 +80,22 @@ const collections = [
         ]
     },
     {
+        "name": "cycling",
+        "city": "Istanbul",
+        "position": {
+            "top": "545px",
+            "left": "1135px"
+        },
+        "photos": [
+            {
+                "src": "https://picsum.photos/500/300",
+            },
+            {
+                "src": "https://picsum.photos/500/300"
+            }
+        ]
+    },
+    {
         "name": "zoo",
         "city": "Madrid",
         "position": {
@@ -101,22 +117,6 @@ const collections = [
         "position": {
             "top": "185px",
             "left": "555px"
-        },
-        "photos": [
-            {
-                "src": "https://picsum.photos/500/300",
-            },
-            {
-                "src": "https://picsum.photos/500/300"
-            }
-        ]
-    },
-    {
-        "name": "cycling",
-        "city": "Istanbul",
-        "position": {
-            "top": "545px",
-            "left": "1135px"
         },
         "photos": [
             {
