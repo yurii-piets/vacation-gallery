@@ -3,7 +3,14 @@ import styled from 'styled-components';
 import {AiOutlineHome, AiTwotoneShopping} from 'react-icons/ai';
 import {GiCycling, GiElephant, GiCalendar} from 'react-icons/gi';
 
-const Fragment = styled.p`
+const Fragment = styled.div`
+    z-index: 10;
+    margin-top: 5%
+    position: absolute;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+    height: 300px; //todo remove me pls
+    background-color: transparent;
+
     ul {
         list-style-type: none;
         display:inline;
@@ -14,6 +21,8 @@ const Fragment = styled.p`
         width: 60px;
         height: 60px;
         color: white;
+        background-color: transparent;
+        margin: 50px 0 0 70px
     }
     
     .icon-item:hover {
@@ -26,11 +35,13 @@ export default class Sidebar extends Component {
     render() {
         return (
             <Fragment>
-                <AiOutlineHome className="icon-item"/>
-                <GiCycling className="icon-item"/>
-                <GiElephant className="icon-item"/>
-                <AiTwotoneShopping className="icon-item"/>
-                <GiCalendar className="icon-item"/>
+                <ul>
+                    <li><AiOutlineHome className="icon-item"/></li>
+                    <li><GiCycling className="icon-item"/></li>
+                    <li><GiElephant className="icon-item"/></li>
+                    <li><AiTwotoneShopping className="icon-item"/></li>
+                    <li><GiCalendar className="icon-item"/></li>
+                </ul>
             </Fragment>
         )
     }
