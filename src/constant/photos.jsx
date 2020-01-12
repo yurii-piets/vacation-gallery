@@ -13,7 +13,7 @@ const categories = [
         ]
     },
     {
-        "category": "theme_park",
+        "category": "zoo",
         "photos": [
             {
                 "city": "Glasgow",

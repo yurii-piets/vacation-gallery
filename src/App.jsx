@@ -1,10 +1,17 @@
 import React from 'react';
-import MapChart from "./component/MapChart";
 import "./styles.css";
-import ZoomableMap from "./component/ZoomableMap";
+import ZoomableMap from "./component/map/ZoomableMap";
+import Sidebar from "./component/navbar/sidebar";
+import colors from './constant/style';
+import {ThemeProvider} from "styled-components";
 
 export default function App() {
     return (
-        <ZoomableMap/>
+        <React.Fragment>
+            <ThemeProvider theme={colors}>
+                <Sidebar/>
+                <ZoomableMap/>
+            </ThemeProvider>
+        </React.Fragment>
     );
 }
