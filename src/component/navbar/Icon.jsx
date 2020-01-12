@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import styled from 'styled-components';
 import {AiOutlineHome, AiTwotoneShopping, AiOutlineFileUnknown} from 'react-icons/ai';
-import {GiCycling, GiElephant, GiCalendar} from 'react-icons/gi';
+import {GiCycling, GiElephant} from 'react-icons/gi';
+import category_colors from "../../constant/category_style";
 
 const Fragment = styled.a`
     .icon {
@@ -21,27 +22,33 @@ const Fragment = styled.a`
 
 export default class Icon extends Component {
     state = {
-        enable: true
+        enabled: true
+    };
+
+    handleOnClick = () => {
+        this.setState({enabled: !this.state.enabled})
+    };
+
+    selectEnabledStyle = (categoryName) => {
+        return {"color": category_colors[categoryName]}
     };
 
     selectIcon = (categoryName) => {
         switch (categoryName) {
             case "home":
-                return <AiOutlineHome className="icon"/>;
+                return <AiOutlineHome className="icon" style={this.state.enabled && this.selectEnabledStyle(categoryName)}/>;
             case "zoo":
-                return <GiElephant className="icon"/>;
+                return <GiElephant className="icon" style={this.state.enabled && this.selectEnabledStyle(categoryName)}/>;
             case "shopping":
-                return <AiTwotoneShopping className="icon"/>;
+                return <AiTwotoneShopping className="icon" style={this.state.enabled && this.selectEnabledStyle(categoryName)}/>;
             case "cycling":
-                return <GiCycling className="icon"/>;
-            default:
-                return <AiOutlineFileUnknown className="icon"/>
+                return <GiCycling className="icon" style={this.state.enabled && this.selectEnabledStyle(categoryName)}/>;
         }
     };
 
     render() {
         return (
-            <Fragment>
+            <Fragment onClick={this.handleOnClick}>
                 {this.selectIcon(this.props.categoryName)}
             </Fragment>
         )

@@ -5,10 +5,10 @@ import Icon from "./Icon";
 
 const Fragment = styled.div`
     z-index: 10;
-    top: 5%
-    position: absolute;
+    position: fixed;
+    margin-top: -19em;
+    top: 50%;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-    height: 300px; //todo remove me pls
     background-color: transparent;
 
     ul {
@@ -18,6 +18,7 @@ const Fragment = styled.div`
 `;
 
 export default class Sidebar extends Component {
+
     render() {
         console.log(Object.keys(category_colors));
         return (
