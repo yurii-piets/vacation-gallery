@@ -15,7 +15,6 @@ const Fragment = styled.a`
     }
     
     .icon:hover {
-        color: ${({theme}) => (theme.primary)};
         transition: 0.7s ease-in-out;
     }
 `;

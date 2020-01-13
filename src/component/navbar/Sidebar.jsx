@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import categories from "../../constant/categories";
 import Icon from "./MenuIcon";
 import CalendarIcon from "./CalendarIcon";
+import {DatePicker} from "react-trip-date";
 
 const Fragment = styled.div`
     z-index: 10;
@@ -20,6 +21,17 @@ const Fragment = styled.div`
 
 export default class Sidebar extends Component {
 
+    state = {
+        showCalendar: false
+    };
+
+    handleCalendarIconClick = () => {
+        console.log(this.state.showCalendar);
+        this.setState({
+            showCalendar: !this.state.showCalendar
+        });
+    };
+
     render() {
         return (
             <Fragment>
@@ -28,8 +40,14 @@ export default class Sidebar extends Component {
                             <li><Icon categoryName={categoryName} onClick={this.props.onClick}/></li>
                         )
                     )}
-                    <li><CalendarIcon/></li>
+                    <li><CalendarIcon onClick={this.handleCalendarIconClick}/></li>
                 </ul>
+
+                {this.state.showCalendar && <DatePicker
+                    disabledBeforToday={false}
+                    disabled={false}/>
+                }
+
             </Fragment>
         )
     }

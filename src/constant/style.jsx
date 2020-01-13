@@ -1,5 +1,6 @@
 const colors = {
-    primary: "#ebfaff"
+    primary: "#ebfaff",
+    calendar: "#6384ff"
 };
 
 export default colors;

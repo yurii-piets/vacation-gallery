@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import {GiCalendar} from "react-icons/gi";
 import React, {Component} from 'react';
+import MenuIcon from "./MenuIcon";
+import colors from "../../constant/style";
+import { DatePicker, RangePicker, theme } from 'react-trip-date';
 
 const Fragment = styled.a`
     .icon {
@@ -13,17 +16,24 @@ const Fragment = styled.a`
     }
     
     .icon:hover {
-        color: ${({theme}) => (theme.primary)};
         transition: 0.7s ease-in-out;
     }
 `;
 
-export default class CalendarIcon extends Component {
+export default class CalendarIcon extends MenuIcon {
+    state = {
+        enabled: false
+    };
+
+    handleCalendarIconClick = () => {
+        this.props.onClick();
+        this.setState({enabled: !this.state.enabled});
+    };
 
     render() {
         return (
-            <Fragment>
-                <GiCalendar className="icon"/>
+            <Fragment onClick={this.handleCalendarIconClick}>
+                <GiCalendar className="icon" style={this.state.enabled && {color: colors.calendar}}/>
             </Fragment>
         );
     }
