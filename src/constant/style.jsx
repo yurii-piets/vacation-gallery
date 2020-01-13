@@ -1,6 +1,8 @@
 const colors = {
     primary: "#ebfaff",
-    calendar: "#6384ff"
+    secondary: "#fff",
+    tertiary: "#6384ff",
+    calendar: "#6384ff",
 };
 
 export default colors;

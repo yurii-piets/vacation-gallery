@@ -5,6 +5,9 @@ import Icon from "./MenuIcon";
 import CalendarIcon from "./CalendarIcon";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import './calendar.css';
+import {MdClear} from 'react-icons/md';
+import {AiOutlineCalendar} from 'react-icons/ai';
 
 const Fragment = styled.div`
     z-index: 10;
@@ -20,20 +23,41 @@ const Fragment = styled.div`
     }
 `;
 
-const RangePickerFragment = styled.div`
-        position: relative;
+const CancelIcon = styled(MdClear)`
+    fill: ${({theme}) => (theme.secondary)};
+    width: 20px;
+    height: 20px;
+    
+    &:hover {
+        fill: ${({theme}) => (theme.tertiary)};
+         transition: 0.7s ease-in-out;
+    }
+`;
+
+const CalendarOpenIcon = styled(AiOutlineCalendar)`
+    fill: ${({theme}) => (theme.secondary)};
+    width: 20px;
+    height: 20px;
+    
+    &:hover {
+        fill: ${({theme}) => (theme.tertiary)};
+         transition: 0.7s ease-in-out;
+    }
 `;
 
 export default class Sidebar extends Component {
 
     state = {
         showCalendar: false,
-        dateRange: [new Date(), new Date()]
+        dateRange: [null, null]
     };
 
     handleDateRangeChange = dateRange => {
         this.props.onDateRangeChange(dateRange);
-        this.setState({dateRange})
+        this.setState({
+            dateRange: dateRange,
+            showCalendar: this.state.showCalendar
+        })
     };
 
     handleCalendarIconClick = () => {
@@ -53,17 +77,22 @@ export default class Sidebar extends Component {
                     <li><CalendarIcon onClick={this.handleCalendarIconClick}/></li>
                 </ul>
 
-                <RangePickerFragment>
                     <ReactCSSTransitionGroup
                         transitionName="example"
                         transitionAppearTimeout={0} transitionEnterTimeout={0} transitionLeaveTimeout={0}
                         transitionAppear={true} transitionEnter={true} transitionLeave={true}>
 
                         {this.state.showCalendar &&
-                        <DateRangePicker onChange={this.handleDateRangeChange} value={this.state.dateRange}/>}
+                        <DateRangePicker
+                            calendarClassName="date-range-picker-cus"
+                            className="date-range-picker-cus"
+                            onChange={this.handleDateRangeChange}
+                            clearIcon={<CancelIcon/>}
+                            calendarIcon={<CalendarOpenIcon/>}
+                            value={this.state.dateRange}/>
+                        }
 
                     </ReactCSSTransitionGroup>
-                </RangePickerFragment>
             </Fragment>
         )
     }
