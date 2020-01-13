@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import categories from "../../constant/categories";
 import Icon from "./MenuIcon";
+import CalendarIcon from "./CalendarIcon";
 
 const Fragment = styled.div`
     z-index: 10;
     position: fixed;
-    margin-top: -19em;
+    margin-top: -23em;
     top: 50%;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
     background-color: transparent;
@@ -27,6 +28,7 @@ export default class Sidebar extends Component {
                             <li><Icon categoryName={categoryName} onClick={this.props.onClick}/></li>
                         )
                     )}
+                    <li><CalendarIcon/></li>
                 </ul>
             </Fragment>
         )
