@@ -6,6 +6,7 @@ const collections = [
             "top": "400px",
             "left": "1135px"
         },
+        "date": "01/01/2020",
         "photos": [
             {
                 "src": "https://picsum.photos/500/300",
@@ -22,6 +23,7 @@ const collections = [
             "top": "405px",
             "left": "1070px"
         },
+        "date": "01/02/2020",
         "photos": [
             {
                 "src": "https://picsum.photos/500/300",
@@ -38,6 +40,7 @@ const collections = [
             "top": "475px",
             "left": "885px"
         },
+        "date": "01/03/2020",
         "photos": [
             {
                 "src": "https://picsum.photos/500/300",
@@ -54,6 +57,7 @@ const collections = [
             "top": "445px",
             "left": "800px"
         },
+        "date": "01/04/2020",
         "photos": [
             {
                 "src": "https://picsum.photos/500/300",
@@ -70,6 +74,7 @@ const collections = [
             "top": "370px",
             "left": "750px"
         },
+        "date": "01/05/2020",
         "photos": [
             {
                 "src": "https://picsum.photos/500/300",
@@ -86,6 +91,7 @@ const collections = [
             "top": "545px",
             "left": "1135px"
         },
+        "date": "01/06/2020",
         "photos": [
             {
                 "src": "https://picsum.photos/500/300",
@@ -102,6 +108,7 @@ const collections = [
             "top": "550px",
             "left": "725px"
         },
+        "date": "01/07/2020",
         "photos": [
             {
                 "src": "https://picsum.photos/500/300",
@@ -118,6 +125,7 @@ const collections = [
             "top": "185px",
             "left": "555px"
         },
+        "date": "01/08/2020",
         "photos": [
             {
                 "src": "https://picsum.photos/500/300",

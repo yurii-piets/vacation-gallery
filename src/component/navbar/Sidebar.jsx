@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import categories from "../../constant/categories";
 import Icon from "./MenuIcon";
 import CalendarIcon from "./CalendarIcon";
-import {DatePicker} from "react-trip-date";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 
 const Fragment = styled.div`
     z-index: 10;
@@ -19,14 +20,23 @@ const Fragment = styled.div`
     }
 `;
 
+const RangePickerFragment = styled.div`
+        position: relative;
+`;
+
 export default class Sidebar extends Component {
 
     state = {
-        showCalendar: false
+        showCalendar: false,
+        dateRange: [new Date(), new Date()]
+    };
+
+    handleDateRangeChange = dateRange => {
+        this.props.onDateRangeChange(dateRange);
+        this.setState({dateRange})
     };
 
     handleCalendarIconClick = () => {
-        console.log(this.state.showCalendar);
         this.setState({
             showCalendar: !this.state.showCalendar
         });
@@ -43,11 +53,17 @@ export default class Sidebar extends Component {
                     <li><CalendarIcon onClick={this.handleCalendarIconClick}/></li>
                 </ul>
 
-                {this.state.showCalendar && <DatePicker
-                    disabledBeforToday={false}
-                    disabled={false}/>
-                }
+                <RangePickerFragment>
+                    <ReactCSSTransitionGroup
+                        transitionName="example"
+                        transitionAppearTimeout={0} transitionEnterTimeout={0} transitionLeaveTimeout={0}
+                        transitionAppear={true} transitionEnter={true} transitionLeave={true}>
 
+                        {this.state.showCalendar &&
+                        <DateRangePicker onChange={this.handleDateRangeChange} value={this.state.dateRange}/>}
+
+                    </ReactCSSTransitionGroup>
+                </RangePickerFragment>
             </Fragment>
         )
     }

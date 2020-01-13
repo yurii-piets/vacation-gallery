@@ -3,7 +3,6 @@ import {GiCalendar} from "react-icons/gi";
 import React, {Component} from 'react';
 import MenuIcon from "./MenuIcon";
 import colors from "../../constant/style";
-import { DatePicker, RangePicker, theme } from 'react-trip-date';
 
 const Fragment = styled.a`
     .icon {
