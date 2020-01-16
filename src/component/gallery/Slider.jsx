@@ -28,8 +28,8 @@ export default class Slider extends Component {
 
     handleNextSlide = () => {
         const {slideIndex} = this.state;
-        const {galleryIndex} = this.props;
-        if (slideIndex === collections[galleryIndex].photos.length  - 1) {
+        const {collectionIndex} = this.props;
+        if (slideIndex === collections[collectionIndex].photos.length  - 1) {
             return;
         }
         this.setState({
@@ -38,12 +38,12 @@ export default class Slider extends Component {
     };
 
     render() {
-        const {galleryIndex} = this.props;
+        const {collectionIndex} = this.props;
         let {slideIndex} = this.state;
-        console.log(collections[galleryIndex]);
+        console.log(collectionIndex);
         return (
             <Fragment>
-                <Slide key={galleryIndex+ 'x' + slideIndex} photo={collections[galleryIndex].photos[slideIndex]}/>
+                <Slide key={collectionIndex + 'x' + slideIndex} photo={collections[collectionIndex].photos[slideIndex]}/>
                 <LeftArrow handlePrevSlide={this.handlePrevSlide}/>
                 <RightArrow handleNextSlide={this.handleNextSlide}/>
             </Fragment>

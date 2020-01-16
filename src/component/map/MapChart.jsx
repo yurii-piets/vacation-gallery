@@ -29,15 +29,16 @@ export default class MapChart extends Component {
                     transitionName="example"
                     transitionAppearTimeout={0} transitionEnterTimeout={0} transitionLeaveTimeout={0}
                     transitionAppear={true} transitionEnter={true} transitionLeave={true}>
-                {
-                    collections
-                        .filter(collection => collection.photos.length > 0)
-                        .filter(collection => this.props.categories.includes(collection.name))
-                        .map(collection => (
+                    {
+                        collections
+                            .filter(collection => collection.photos.length > 0)
+                            .filter(collection => this.props.categories.includes(collection.name))
+                            .map(collection => (
                                 // key property is required for proper animation
-                                <MapIcon key={collections.indexOf(collection)} category={collection}/>
-                        ))
-                }
+                                <MapIcon key={collections.indexOf(collection)} category={collection}
+                                         onCollectionSelect={this.props.onCollectionSelect}/>
+                            ))
+                    }
                 </ReactCSSTransitionGroup>
 
                 <svg version="1.2" xmlns="http://www.w3.org/2000/svg"

@@ -6,37 +6,41 @@ import Slider from "./component/gallery/Slider";
 import colors from './constant/style';
 import {ThemeProvider} from "styled-components";
 import categories from "./constant/categories";
+import collections from "./constant/collections";
 
 export default class App extends Component {
 
     state = {
         enabledCategories: Object.keys(categories),
-        galleryIndex: 0
-        // galleryIndex: null
+        collectionIndex: null
     };
 
     handleMenuIconClick = (categoryName) => {
         const {enabledCategories} = this.state;
         this.setState({
-            enabledCategories: enabledCategories.includes(categoryName) ? enabledCategories.filter(ecn => ecn !== categoryName) : enabledCategories.concat([categoryName])
+            enabledCategories: enabledCategories.includes(categoryName) ? enabledCategories.filter(ecn => ecn !== categoryName) : enabledCategories.concat([categoryName]),
+            collectionIndex: this.state.collectionIndex
         });
     };
 
-    handleGalleryIndexSelect = index => {
-        this.setState(state => {
-            state.galleryIndex = index
+    handleCollectionSelect = index => {
+        console.log("handleCollectionSelect", index);
+        this.setState({
+            enabledCategories: this.state.enabledCategories,
+            collectionIndex: index
         });
     };
 
     render() {
+        console.log(this.state.collectionIndex);
         return (
             <React.Fragment>
                 <ThemeProvider theme={colors}>
-                    {/*<Sidebar onClick={this.handleMenuIconClick}/>*/}
-                    {/*<ZoomableMap categories={this.state.enabledCategories}*/}
-                    {/*             onGalleryIndexSelect={this.handleGalleryIndexSelect}/>*/}
-                    {this.state.galleryIndex != null &&
-                    <Slider key={this.state.galleryIndex} galleryIndex={this.state.galleryIndex}/>}
+                    <Sidebar onClick={this.handleMenuIconClick}/>
+                    <ZoomableMap categories={this.state.enabledCategories}
+                                 onCollectionSelect={this.handleCollectionSelect}/>
+                    {this.state.collectionIndex != null &&
+                    <Slider key={this.state.collectionIndex} collectionIndex={this.state.collectionIndex}/>}
                 </ThemeProvider>
             </React.Fragment>
         )
