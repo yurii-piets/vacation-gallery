@@ -1,17 +1,17 @@
 const collections = [
     {
-        "name": "home",
-        "city": "Kiev",
-        "position": {
-            "top": "400px",
-            "left": "1135px"
+        name: "home",
+        city: "Kiev",
+        position: {
+            top: "400px",
+            left: "1135px"
         },
-        "photos": [
+        photos: [
             {
-                "src": "https://picsum.photos/500/300",
+                src: "https://i.picsum.photos/id/188/500/300.jpg",
             },
             {
-                "src": "https://picsum.photos/500/300"
+                src: "https://i.picsum.photos/id/844/500/300.jpg"
             }
         ]
     },
@@ -24,10 +24,10 @@ const collections = [
         },
         "photos": [
             {
-                "src": "https://picsum.photos/500/300",
+                "src": "https://i.picsum.photos/id/125/500/300.jpg",
             },
             {
-                "src": "https://picsum.photos/500/300"
+                "src": "https://i.picsum.photos/id/715/500/300.jpg"
             }
         ]
     },
