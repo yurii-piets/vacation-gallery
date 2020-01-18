@@ -4,6 +4,7 @@ import Slide from "./Slide";
 import RightArrow from "./arrows/RightArrow";
 import LeftArrow from "./arrows/LeftArrow";
 import collections from "../../constant/collections";
+import Thumbnail from "./Thumbnail";
 
 const Fragment = styled.div`
     width: 700px;
@@ -29,7 +30,7 @@ export default class Slider extends Component {
     handleNextSlide = () => {
         const {slideIndex} = this.state;
         const {collectionIndex} = this.props;
-        if (slideIndex === collections[collectionIndex].photos.length  - 1) {
+        if (slideIndex === collections[collectionIndex].photos.length - 1) {
             return;
         }
         this.setState({
@@ -37,15 +38,26 @@ export default class Slider extends Component {
         });
     };
 
+    handleThumbnailSelect = thumbnailId => {
+        this.setState({
+            slideIndex: thumbnailId
+        });
+    };
+
     render() {
         const {collectionIndex} = this.props;
         let {slideIndex} = this.state;
-        console.log(collectionIndex);
+        const photos = collections[collectionIndex].photos;
         return (
             <Fragment>
-                <Slide key={collectionIndex + 'x' + slideIndex} photo={collections[collectionIndex].photos[slideIndex]}/>
+                <Slide key={collectionIndex + 'x' + slideIndex} photo={photos[[slideIndex]]}/>
                 <LeftArrow handlePrevSlide={this.handlePrevSlide}/>
                 <RightArrow handleNextSlide={this.handleNextSlide}/>
+                {photos.map(photo => {
+                    const photoIndex = photos.indexOf(photo);
+                    return <Thumbnail imageSrc={photo.src} active={slideIndex === photoIndex}
+                                      onClick={() => this.handleThumbnailSelect(photoIndex)}/>
+                })}
             </Fragment>
         );
     }

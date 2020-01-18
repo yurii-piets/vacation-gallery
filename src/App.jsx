@@ -12,7 +12,8 @@ export default class App extends Component {
 
     state = {
         enabledCategories: Object.keys(categories),
-        collectionIndex: null
+        // collectionIndex: null
+        collectionIndex: 0
     };
 
     handleMenuIconClick = (categoryName) => {
@@ -32,13 +33,12 @@ export default class App extends Component {
     };
 
     render() {
-        console.log(this.state.collectionIndex);
         return (
             <React.Fragment>
                 <ThemeProvider theme={colors}>
-                    <Sidebar onClick={this.handleMenuIconClick}/>
-                    <ZoomableMap categories={this.state.enabledCategories}
-                                 onCollectionSelect={this.handleCollectionSelect}/>
+                    {/*<Sidebar onClick={this.handleMenuIconClick}/>*/}
+                    {/*<ZoomableMap categories={this.state.enabledCategories}*/}
+                    {/*             onCollectionSelect={this.handleCollectionSelect}/>*/}
                     {this.state.collectionIndex != null &&
                     <Slider key={this.state.collectionIndex} collectionIndex={this.state.collectionIndex}/>}
                 </ThemeProvider>

@@ -7,9 +7,9 @@ const Fragment = styled.a`
     width: 100%;
 `;
 
-const Slide = photo => {
+const Slide = ({photo}) => {
     const styles = {
-        backgroundImage: `url(${photo.photo.src})`,
+        backgroundImage: `url(${photo.src})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 60%'
