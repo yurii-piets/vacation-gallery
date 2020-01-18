@@ -8,34 +8,34 @@ const collections = [
         },
         photos: [
             {
-                src: "https://i.picsum.photos/id/188/1522/746.jpg",
+                src: "https://i.picsum.photos/id/188/1663/768.jpg",
             },
             {
-                src: "https://i.picsum.photos/id/844/1522/746.jpg"
+                src: "https://i.picsum.photos/id/844/1663/768.jpg"
             },
             {
-                src: "https://i.picsum.photos/id/25/1522/746.jpg"
+                src: "https://i.picsum.photos/id/25/1663/768.jpg"
             },
             {
-                src: "https://i.picsum.photos/id/71/1522/746.jpg"
+                src: "https://i.picsum.photos/id/71/1663/768.jpg"
             },
             {
-                src: "https://i.picsum.photos/id/1024/1522/746.jpg"
+                src: "https://i.picsum.photos/id/1024/1663/768.jpg"
             },
             {
-                src: "https://i.picsum.photos/id/770/1522/746.jpg"
+                src: "https://i.picsum.photos/id/770/1663/768.jpg"
             },
             {
-                src: "https://i.picsum.photos/id/992/1522/746.jpg"
+                src: "https://i.picsum.photos/id/992/1663/768.jpg"
             },
             {
-                src: "https://i.picsum.photos/id/670/1522/746.jpg"
+                src: "https://i.picsum.photos/id/670/1663/768.jpg"
             },
             {
-                src: "https://i.picsum.photos/id/0/1522/746.jpg"
+                src: "https://i.picsum.photos/id/0/1663/768.jpg"
             },
             {
-                src: "https://i.picsum.photos/id/1004/1522/746.jpg"
+                src: "https://i.picsum.photos/id/1004/1663/768.jpg"
             }
         ]
     },
@@ -48,10 +48,10 @@ const collections = [
         },
         "photos": [
             {
-                "src": "https://i.picsum.photos/id/125/1522/746.jpg",
+                "src": "https://i.picsum.photos/id/125/1663/768.jpg",
             },
             {
-                "src": "https://i.picsum.photos/id/715/1522/746.jpg"
+                "src": "https://i.picsum.photos/id/715/1663/768.jpg"
             }
         ]
     },
@@ -64,10 +64,10 @@ const collections = [
         },
         "photos": [
             {
-                "src": "https://picsum.photos/1522/746",
+                "src": "https://picsum.photos/1663/768",
             },
             {
-                "src": "https://picsum.photos/1522/746"
+                "src": "https://picsum.photos/1663/768"
             }
         ]
     },
@@ -80,10 +80,10 @@ const collections = [
         },
         "photos": [
             {
-                "src": "https://picsum.photos/1522/746",
+                "src": "https://picsum.photos/1663/768",
             },
             {
-                "src": "https://picsum.photos/1522/746"
+                "src": "https://picsum.photos/1663/768"
             }
         ]
     },
@@ -96,10 +96,10 @@ const collections = [
         },
         "photos": [
             {
-                "src": "https://picsum.photos/1522/746",
+                "src": "https://picsum.photos/1663/768",
             },
             {
-                "src": "https://picsum.photos/1522/746"
+                "src": "https://picsum.photos/1663/768"
             }
         ]
     },
@@ -112,10 +112,10 @@ const collections = [
         },
         "photos": [
             {
-                "src": "https://picsum.photos/1522/746",
+                "src": "https://picsum.photos/1663/768",
             },
             {
-                "src": "https://picsum.photos/1522/746"
+                "src": "https://picsum.photos/1663/768"
             }
         ]
     },
@@ -128,10 +128,10 @@ const collections = [
         },
         "photos": [
             {
-                "src": "https://picsum.photos/1522/746",
+                "src": "https://picsum.photos/1663/768",
             },
             {
-                "src": "https://picsum.photos/1522/746"
+                "src": "https://picsum.photos/1663/768"
             }
         ]
     },
@@ -144,10 +144,10 @@ const collections = [
         },
         "photos": [
             {
-                "src": "https://picsum.photos/1522/746",
+                "src": "https://picsum.photos/1663/768",
             },
             {
-                "src": "https://picsum.photos/1522/746"
+                "src": "https://picsum.photos/1663/768"
             }
         ]
     }

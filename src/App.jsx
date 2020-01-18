@@ -9,21 +9,18 @@ import categories from "./constant/categories";
 import collections from "./constant/collections";
 
 export default class App extends Component {
+
     state = {
         enabledCategories: Object.keys(categories),
-        // collectionIndex: null
         collectionIndex: 0
     };
 
     constructor(props) {
         super(props);
-        this.sliderRef = React.createRef()
+        this.sliderRef = React.createRef();
     }
 
-    scrollToMySliderRef = () => {
-        console.log("this.sliderRef.offsetTop", this.sliderRef.offsetTop);
-        window.scrollTo(0, this.sliderRef.offsetTop);
-    };
+    scrollToMySliderRef = () => window.scrollTo(0, this.sliderRef.offsetTop);
 
     handleMenuIconClick = (categoryName) => {
         const {enabledCategories} = this.state;
@@ -34,13 +31,14 @@ export default class App extends Component {
     };
 
     handleCollectionSelect = index => {
-        this.scrollToMySliderRef();
         this.setState({
             enabledCategories: this.state.enabledCategories,
             collectionIndex: index
         });
+        this.scrollToMySliderRef();
     };
 
+    handleToTopClick = () => window.scrollTo(0, 0);
 
     render() {
         return (
@@ -52,7 +50,9 @@ export default class App extends Component {
                     {this.state.collectionIndex != null &&
                     <div ref={(ref) => this.sliderRef = ref}>
                         <Slider key={this.state.collectionIndex}
-                                collectionIndex={this.state.collectionIndex}/>
+                                collectionIndex={this.state.collectionIndex}
+                                onToTopClick={this.handleToTopClick}
+                        />
                     </div>}
                 </ThemeProvider>
             </React.Fragment>
