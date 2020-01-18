@@ -1,7 +1,7 @@
 .arrow {
     height: 50px;
     width: 50px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     color: #fff;

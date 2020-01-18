@@ -7,8 +7,10 @@ import collections from "../../constant/collections";
 import ThumbnailsBar from "./ThumbnailsBar";
 
 const Fragment = styled.div`
-    width: 700px;
-    height: 700px;
+    width: auto;
+    height: 933px;
+    margin: '5px',
+    padding: '5px',
 `;
 
 export default class Slider extends Component {

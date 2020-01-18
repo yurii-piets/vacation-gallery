@@ -3,7 +3,7 @@ import Thumbnail from "./Thumbnail";
 import styled from 'styled-components';
 
 const Fragment = styled.div`
-
+    display: inline-block;
 `;
 
 const ThumbnailsBar = ({photos, activePhotoIndex, onThumbnailSelect}) => {
