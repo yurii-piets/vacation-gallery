@@ -5,3 +5,8 @@ html, body, svg, div {
     background: #262626;
     scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}

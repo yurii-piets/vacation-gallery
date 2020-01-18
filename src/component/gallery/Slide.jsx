@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Fragment = styled.a`
     display: inline-block;
-    height: 80%;
-    width: 80%;
+    height: 89%;
+    width: 89%;
     position: relative;
 `;
 

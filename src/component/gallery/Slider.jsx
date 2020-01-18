@@ -8,9 +8,10 @@ import ThumbnailsBar from "./ThumbnailsBar";
 
 const Fragment = styled.div`
     width: auto;
-    height: 933px;
-    margin: '5px',
-    padding: '5px',
+    height: 870px;
+    margin: 15px;
+    padding: 15px;
+    align-items: center;
 `;
 
 export default class Slider extends Component {

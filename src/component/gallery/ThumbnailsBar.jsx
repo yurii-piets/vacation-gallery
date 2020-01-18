@@ -7,7 +7,7 @@ const Fragment = styled.div`
     
     // scrollbar settings 
     overflow: auto;
-    max-height: 80vh;
+    max-height: 84vh;
     
     ::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
