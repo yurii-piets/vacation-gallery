@@ -3,4 +3,5 @@ html, body, svg, div {
     padding: 0;
     border: 0;
     background: #262626;
+    scroll-behavior: smooth;
 }
