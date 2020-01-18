@@ -36,9 +36,9 @@ export default class App extends Component {
         return (
             <React.Fragment>
                 <ThemeProvider theme={colors}>
-                    {/*<Sidebar onClick={this.handleMenuIconClick}/>*/}
-                    {/*<ZoomableMap categories={this.state.enabledCategories}*/}
-                    {/*             onCollectionSelect={this.handleCollectionSelect}/>*/}
+                    <Sidebar onClick={this.handleMenuIconClick}/>
+                    <ZoomableMap categories={this.state.enabledCategories}
+                                 onCollectionSelect={this.handleCollectionSelect}/>
                     {this.state.collectionIndex != null &&
                     <Slider key={this.state.collectionIndex} collectionIndex={this.state.collectionIndex}/>}
                 </ThemeProvider>

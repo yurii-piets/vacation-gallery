@@ -8,8 +8,8 @@
     border-radius: 50%;
     cursor: pointer;
     transition: transform ease-in .1s;
-    z-index: 999;
-    position: absolute;
+    /*z-index: 999;*/
+    /*position: absolute;*/
     top: 50%;
 }
 
