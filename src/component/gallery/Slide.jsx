@@ -15,7 +15,6 @@ const Slide = ({photo, children}) => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 60%',
         margin: '5px',
-        padding: '5px',
         display: 'inline-block',
         'align-items': 'center',
         'justify-content': 'center'

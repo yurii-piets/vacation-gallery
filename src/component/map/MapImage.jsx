@@ -11,7 +11,7 @@ export default class MapImage extends Component {
             "left": `${(category.position.left)}`,
             "background-size": "cover",
             "background-image": "url(" + `${(category.photos[0].src)}` + ")",
-            "border-radius": size + "px",
+            "border-radius": '50%',
             "border": "1px solid",
             "border-color": `${categories[(category.name)]}`,
             "width": size + "px",
