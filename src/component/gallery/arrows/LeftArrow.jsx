@@ -3,7 +3,7 @@ import React from 'react'
 import './arrow-style.css'
 
 const LeftArrow = ({handlePrevSlide, coolButtons}) => {
-    const className = 'arrow left-arrow' + (coolButtons ? ' cool-buttons' : '');
+    const className = 'arrow arrow-left' + (coolButtons ? ' cool-buttons' : '');
     return (<MdChevronLeft className={className} onClick={handlePrevSlide}/>);
 };
 

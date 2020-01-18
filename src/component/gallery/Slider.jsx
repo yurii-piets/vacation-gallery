@@ -51,9 +51,10 @@ export default class Slider extends Component {
         const photos = collections[collectionIndex].photos;
         return (
             <Fragment>
-                <Slide key={collectionIndex + 'x' + slideIndex} photo={photos[[slideIndex]]}/>
-                <LeftArrow handlePrevSlide={this.handlePrevSlide}/>
-                <RightArrow handleNextSlide={this.handleNextSlide}/>
+                <Slide key={collectionIndex + 'x' + slideIndex} photo={photos[[slideIndex]]}>
+                    <LeftArrow handlePrevSlide={this.handlePrevSlide}/>
+                    <RightArrow handleNextSlide={this.handleNextSlide}/>
+                </Slide>
                 <ThumbnailsBar key={collectionIndex + 'thb'}
                                photos={photos}
                                activePhotoIndex={slideIndex}

@@ -5,9 +5,10 @@ const Fragment = styled.a`
     display: inline-block;
     height: 80%;
     width: 80%;
+    position: relative;
 `;
 
-const Slide = ({photo}) => {
+const Slide = ({photo, children}) => {
     const styles = {
         backgroundImage: `url(${photo.src})`,
         backgroundSize: 'cover',
@@ -19,7 +20,11 @@ const Slide = ({photo}) => {
         'align-items': 'center',
         'justify-content': 'center'
     };
-    return <Fragment style={styles}/>
+    return (
+        <Fragment style={styles}>
+            {children}
+        </Fragment>
+    );
 };
 
 export default Slide
