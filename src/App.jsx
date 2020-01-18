@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useRef, useEffect} from 'react';
 import "./styles.css";
 import ZoomableMap from "./component/map/ZoomableMap";
 import Sidebar from "./component/navbar/Sidebar";
@@ -9,11 +9,20 @@ import categories from "./constant/categories";
 import collections from "./constant/collections";
 
 export default class App extends Component {
-
     state = {
         enabledCategories: Object.keys(categories),
         // collectionIndex: null
         collectionIndex: 0
+    };
+
+    constructor(props) {
+        super(props);
+        this.sliderRef = React.createRef()
+    }
+
+    scrollToMySliderRef = () => {
+        console.log("this.sliderRef.offsetTop", this.sliderRef.offsetTop);
+        window.scrollTo(0, this.sliderRef.offsetTop);
     };
 
     handleMenuIconClick = (categoryName) => {
@@ -25,12 +34,13 @@ export default class App extends Component {
     };
 
     handleCollectionSelect = index => {
-        console.log("handleCollectionSelect", index);
+        this.scrollToMySliderRef();
         this.setState({
             enabledCategories: this.state.enabledCategories,
             collectionIndex: index
         });
     };
+
 
     render() {
         return (
@@ -40,7 +50,10 @@ export default class App extends Component {
                     <ZoomableMap categories={this.state.enabledCategories}
                                  onCollectionSelect={this.handleCollectionSelect}/>
                     {this.state.collectionIndex != null &&
-                    <Slider key={this.state.collectionIndex} collectionIndex={this.state.collectionIndex}/>}
+                    <div ref={(ref) => this.sliderRef = ref}>
+                        <Slider key={this.state.collectionIndex}
+                                collectionIndex={this.state.collectionIndex}/>
+                    </div>}
                 </ThemeProvider>
             </React.Fragment>
         )
