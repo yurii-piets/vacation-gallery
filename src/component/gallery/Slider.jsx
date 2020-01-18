@@ -4,12 +4,11 @@ import Slide from "./Slide";
 import RightArrow from "./arrows/RightArrow";
 import LeftArrow from "./arrows/LeftArrow";
 import collections from "../../constant/collections";
-import Thumbnail from "./Thumbnail";
+import ThumbnailsBar from "./ThumbnailsBar";
 
 const Fragment = styled.div`
     width: 700px;
     height: 700px;
-    // background: #000;
 `;
 
 export default class Slider extends Component {
@@ -53,11 +52,10 @@ export default class Slider extends Component {
                 <Slide key={collectionIndex + 'x' + slideIndex} photo={photos[[slideIndex]]}/>
                 <LeftArrow handlePrevSlide={this.handlePrevSlide}/>
                 <RightArrow handleNextSlide={this.handleNextSlide}/>
-                {photos.map(photo => {
-                    const photoIndex = photos.indexOf(photo);
-                    return <Thumbnail imageSrc={photo.src} active={slideIndex === photoIndex}
-                                      onClick={() => this.handleThumbnailSelect(photoIndex)}/>
-                })}
+                <ThumbnailsBar key={collectionIndex + 'thb'}
+                               photos={photos}
+                               activePhotoIndex={slideIndex}
+                               onThumbnailSelect={this.handleThumbnailSelect}/>
             </Fragment>
         );
     }
