@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import styled from "styled-components";
 import placeholder from './../../constant/loading-placeholder.gif';
+import LazyLoadBackgroundImage from "../LazyLoadBackgroundImage";
 
-const Fragment = styled.a`
+const Fragment = styled(LazyLoadBackgroundImage)`
     display: inline-block;
     height: 88%;
     width: 88%;
@@ -18,23 +19,9 @@ const Fragment = styled.a`
 
 export default class Slide extends Component {
 
-    state = {
-        src: null
-    };
-
-    componentDidMount() {
-        const {src} = this.props.photo;
-        const imageLoader = new Image();
-        imageLoader.src = src;
-        imageLoader.onload = () => {
-            this.setState({src});
-        };
-    };
-
     render() {
-        const styles = {backgroundImage: `url(${this.state.src || placeholder})`};
         return (
-            <Fragment style={styles}>
+            <Fragment src={this.props.photo.src}>
                 {this.props.children}
             </Fragment>
         );
