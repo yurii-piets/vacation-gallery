@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Slide from "./Slide";
 import RightArrow from "./arrows/RightArrow";
 import LeftArrow from "./arrows/LeftArrow";
-import collections from "../../constant/collections";
+import {collections} from "../../constant/collections";
 import ThumbnailsBar from "./ThumbnailsBar";
 import ToTopArrow from "./arrows/ToTopArrow";
 

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import categories from "../../constant/categories";
-import collections from "../../constant/collections";
+import {collections} from "../../constant/collections";
 
 export default class MapImage extends Component {
 

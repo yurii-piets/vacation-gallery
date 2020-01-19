@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import styled from 'styled-components';
-import collections from "../../constant/collections";
+import {collections} from "../../constant/collections";
 import "./mapIconsAnimation.css"
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import MapIcon from "./MapImage";

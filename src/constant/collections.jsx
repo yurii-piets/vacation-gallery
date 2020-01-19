@@ -1,4 +1,4 @@
-const collections = [
+export const collections = [
     {
         name: 'home',
         city: 'Kiev',
@@ -59,7 +59,7 @@ const collections = [
         photos: [
             {
                 src: 'https://i.picsum.photos/id/125/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/125/1660/90.jpg'
+                placeholder: 'https://i.picsum.photos/id/125/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/715/1663/768.jpg',
@@ -164,5 +164,3 @@ const collections = [
         ]
     }
 ];
-
-export default collections;
