@@ -1,18 +1,19 @@
 import React, {Component} from 'react'
 import styled from "styled-components";
+import placeholder from './../../constant/loading-placeholder.gif';
 
 const Fragment = styled.a`
     display: inline-block;
     height: 88%;
     width: 88%;
     position: relative;
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: '50% 60%',
-    margin: '5px',
-    display: 'inline-block',
-    'align-items': 'center',
-    'justify-content': 'center'
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    margin: 5px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
 `;
 
 export default class Slide extends Component {
@@ -31,7 +32,7 @@ export default class Slide extends Component {
     };
 
     render() {
-        const styles = {backgroundImage: `url(${this.state.src || this.props.photo.placeholder})`};
+        const styles = {backgroundImage: `url(${this.state.src || placeholder})`};
         return (
             <Fragment style={styles}>
                 {this.props.children}

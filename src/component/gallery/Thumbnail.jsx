@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Thumbnail = ({imageSrc, active, onClick}) => {
+const Thumbnail = ({thumbnail, imageSrc, active, onClick}) => {
     const styles = {
         width: '160px',
         height: '90px',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 60%',
-        backgroundImage: `url(${imageSrc})`,
+        backgroundImage: `url(${thumbnail || imageSrc})`,
         filter: `${active ? 'saturate(100%)' : 'saturate(0%)'}`,
         margin: '5px',
         padding: '5px'

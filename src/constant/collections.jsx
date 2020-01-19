@@ -9,43 +9,43 @@ export const collections = [
         photos: [
             {
                 src: 'https://i.picsum.photos/id/188/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/188/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/188/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/844/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/844/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/844/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/25/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/25/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/25/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/71/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/71/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/71/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/1024/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/1024/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/1024/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/770/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/770/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/770/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/992/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/992/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/992/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/670/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/670/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/670/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/0/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/0/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/0/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/1004/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/1004/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/1004/160/90.jpg'
             }
         ]
     },
@@ -59,11 +59,11 @@ export const collections = [
         photos: [
             {
                 src: 'https://i.picsum.photos/id/125/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/125/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/125/160/90.jpg'
             },
             {
                 src: 'https://i.picsum.photos/id/715/1663/768.jpg',
-                placeholder: 'https://i.picsum.photos/id/715/160/90.jpg'
+                thumbnail: 'https://i.picsum.photos/id/715/160/90.jpg'
             }
         ]
     },
