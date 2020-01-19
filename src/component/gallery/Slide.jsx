@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import styled from "styled-components";
-import placeholder from './../../constant/loading-placeholder.gif';
 import LazyLoadBackgroundImage from "../LazyLoadBackgroundImage";
 
 const Fragment = styled(LazyLoadBackgroundImage)`

@@ -20,9 +20,9 @@ export default class LazyLoadBackgroundImage extends Component {
     render() {
         const styles = {backgroundImage: `url(${this.state.src || placeholder})`};
         return (
-            <a style={styles} className={this.props.className}>
+            <div style={styles} className={this.props.className} onClick={this.props.onClick}>
                 {this.props.children}
-            </a>
+            </div>
         );
     }
 }
