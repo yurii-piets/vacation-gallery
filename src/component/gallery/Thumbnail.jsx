@@ -10,15 +10,12 @@ const Fragment = styled(LazyLoadBackgroundImage)`
     background-position: 50% 60%;
     margin: 5px;
     padding: 5px;
+    filter: ${({active}) => (active) ? 'saturate(100%)' : 'saturate(0%)'};
 `;
 
-const Thumbnail = ({thumbnail, imageSrc, active, onClick}) => {
-    const styles = {
-        backgroundImage: `url(${thumbnail || imageSrc})`,
-        filter: `${active ? 'saturate(100%)' : 'saturate(0%)'}`,
-    };
+const Thumbnail = ({src, active, onClick}) => {
     return (
-        <Fragment key={imageSrc} src={imageSrc} style={styles} onClick={onClick}/>
+        <Fragment key={src} src={src} active={active} onClick={onClick}/>
     );
 };
 

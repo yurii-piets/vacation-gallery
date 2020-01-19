@@ -8,7 +8,6 @@ export default class LazyLoadBackgroundImage extends Component {
     };
 
     componentDidMount() {
-        console.log("componentDidMount");
         const {src} = this.props;
         const imageLoader = new Image();
         imageLoader.src = src;

@@ -33,7 +33,11 @@ const ThumbnailsBar = ({photos, activePhotoIndex, onThumbnailSelect}) => {
     return (
         <Fragment>{photos.map(photo => {
                 const photoIndex = photos.indexOf(photo);
-                return <Thumbnail imageSrc={photo.src} thumbnail={photo.thumbnail} active={activePhotoIndex === photoIndex}
+                console.log("activePhotoIndex === photoIndex", activePhotoIndex === photoIndex ? activePhotoIndex : '');
+                return <Thumbnail key={photo.src + 'thb'}
+                                  src={photo.thumbnail}
+                                  thumbnail={photo.thumbnail}
+                                  active={activePhotoIndex === photoIndex}
                                   onClick={() => onThumbnailSelect(photoIndex)}/>
             }
         )}
