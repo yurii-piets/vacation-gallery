@@ -1,4 +1,4 @@
-import React, {Component, useRef, useEffect} from 'react';
+import React, {Component} from 'react';
 import "./styles.css";
 import ZoomableMap from "./component/map/ZoomableMap";
 import Sidebar from "./component/navbar/Sidebar";
@@ -6,13 +6,12 @@ import Slider from "./component/gallery/Slider";
 import colors from './constant/style';
 import {ThemeProvider} from "styled-components";
 import categories from "./constant/categories";
-import collections from "./constant/collections";
 
 export default class App extends Component {
 
     state = {
         enabledCategories: Object.keys(categories),
-        collectionIndex: 0
+        collectionIndex: null
     };
 
     constructor(props) {
@@ -34,8 +33,7 @@ export default class App extends Component {
         this.setState({
             enabledCategories: this.state.enabledCategories,
             collectionIndex: index
-        });
-        this.scrollToMySliderRef();
+        }, () => this.scrollToMySliderRef());
     };
 
     handleToTopClick = () => window.scrollTo(0, 0);
