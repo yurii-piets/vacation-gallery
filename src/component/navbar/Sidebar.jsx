@@ -10,10 +10,12 @@ import {MdClear} from 'react-icons/md';
 import {AiOutlineCalendar} from 'react-icons/ai';
 
 const Fragment = styled.div`
-    z-index: 10;
-    position: fixed;
-    margin-top: -23em;
-    top: 50%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+    justify-content: center;
+    top: 25%;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
     background-color: transparent;
 

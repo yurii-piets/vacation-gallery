@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import categories from "../../constant/categories";
+import {collections} from "../../constant/collections";
 
 export default class MapImage extends Component {
 
@@ -9,8 +10,8 @@ export default class MapImage extends Component {
             "top": `${(category.position.top)}`,
             "left": `${(category.position.left)}`,
             "background-size": "cover",
-            "background-image": "url(" + `${(category.photos[0].src)}` + ")",
-            "border-radius": size + "px",
+            "background-image": "url(" + `${(category.photos[0].thumbnail || category.photos[0].src)}` + ")",
+            "border-radius": '50%',
             "border": "1px solid",
             "border-color": `${categories[(category.name)]}`,
             "width": size + "px",
@@ -20,8 +21,10 @@ export default class MapImage extends Component {
     };
 
     render() {
+        const {category} = this.props;
         return (
-            <div style={this.prepareIcon(this.props.category)}/>
+            <div onClick={() => this.props.onCollectionSelect(collections.indexOf(category))}
+                 style={this.prepareIcon(category)}/>
         );
     }
 }

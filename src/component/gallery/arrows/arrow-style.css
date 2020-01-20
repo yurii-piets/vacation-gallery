@@ -1,0 +1,39 @@
+.arrow {
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    background-color: transparent;
+}
+
+.arrow-vertical {
+    display: inline-block;
+    height: 100%;
+    width: 100px;
+}
+
+.arrow-horizontal {
+    display: block;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+    position: relative;
+    padding: 15px;
+    margin: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow:hover {
+    transition: ease-in-out .2s;
+    background: rgba(44, 44, 44, 0.5);
+}
